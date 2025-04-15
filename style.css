@@ -1,60 +1,108 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-/* font-family: "Roboto Flex",
- sans-serif;
- font-optical-sizing: auto;
- font-weight: <weight>;
- font-style: normal;
- */
-h1 {
-    font-size: 200px;
-    color: aliceblue;
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
+    min-height: 100dvh;
     font-family: "Cormorant Garamond", serif;
     font-optical-sizing: auto;
-    font-weight: 300px;
+    font-weight: 400;
     font-style: normal;
-    background: url(https://images.pexels.com/photos/9240554/pexels-photo-9240554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background: url(https://images.pexels.com/photos/9240554/pexels-photo-9240554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) no-repeat center center/cover;
+    color: aliceblue;
+    padding: 20px;
 }
 
-.generateQuote {
-    display: flex;
-    justify-content: row;
-    align-items: flex-end;
+#quote-box {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    padding: 40px 20px;
 }
 
-button {
-    
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: #d9d9d9;
-    color: rgb(11, 11, 11);
-    font-family: "Roboto Flex" sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200px;
-    font-style: normal;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between; /* Space buttons apart */
-    align-items: center;
-    flex-wrap: wrap;
+
+#quote-box .title {
+  
+    font-family: "Cormorant Garamond", serif;
+    font-size: 6rem;
+    font-weight: 700;
+    color: aliceblue;
+    margin-bottom: 40px;
+    line-height: 1.1;
 }
+
+
+.quote-area {
+    margin-bottom: 30px;
+}
+
+
+#quote {
+    display: block;
+    font-size: 1.9rem;
+    font-style: italic;
+    font-weight: 400;
+    color: aliceblue;
+    margin-bottom: 15px;
+    min-height: 60px;
+    position: relative;
+    padding: 0 25px;
+}
+
+
+#quote::before,
+#quote::after {
+    content: '"';
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 1.8rem;
+    color: aliceblue;
+    position: absolute;
+    top: 0.1em;
+}
+
+#quote::before {
+    left: 0;
+}
+
+#quote::after {
+    right: 0;
+}
+
+#author {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #d0efff;
+    font-style: normal;
+    text-align: right;
+    padding-right: 20px;
+}
+
 
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+.button-container button {
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f0f8ff;
+    color: #1e3a5f;
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
