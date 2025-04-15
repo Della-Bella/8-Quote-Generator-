@@ -10,14 +10,14 @@
     <title>Quote Generator</title>
 </head>
 <body>
-    <div id="quoteContainer">
+    <div id="quote-box">
         <h1 class="title">Quote of the Day</h1>
-        <div id="generateQuote">
-            <p id="quoteRandom"></p>
-            <p id="author"></p>
-              <div class="button-container">
-                 <button id="newQuote" onclick="quote()">New Quote</button>
-                 <button id="twitter"onclick="twitter()" >Tweet</button>
+            <blockquote id="quote">Loading...</blockquote>
+            <span id="author">Loading...</span>
+            <div class="button-container">
+                 <button id="newQuote" onclick="getQuote(api_url)">New Quote</button>
+                  <button id="btn-twitter" onclick="tweet()">
+                <i class="fab fa-twitter">Tweet</i> 
             </div>
         </div>
     </div>
